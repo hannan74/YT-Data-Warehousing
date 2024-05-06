@@ -679,6 +679,7 @@ if options == "Data Analysing":
         mydb.commit()
 
         df9 = pd.DataFrame(table9, columns=["channels","average_duration"])
+        df9['average_duration'] = df9['average_duration'].astype(str)
         st.write(df9)
 
 
